@@ -17,23 +17,24 @@ namespace DataAccessLayer.Concreate.Repositories
         DbSet<Category> _object;
         public void Delete(Category p)
         {
-            throw new NotImplementedException();
+            _object.Remove(p);
+            c.SaveChanges();
         }
 
         public void Insert(Category p)
         {
-            throw new NotImplementedException();
+            _object.Add(p);
+            c.SaveChanges();
         }
 
         public List<Category> List()
         {
-         return _object.ToList();
-
+         return _object.ToList(); 
         }
 
         public void Update(Category p)
         {
-            throw new NotImplementedException();
+            c.SaveChanges();
         }
     }
 }
