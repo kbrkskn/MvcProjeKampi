@@ -7,8 +7,18 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface ICategoryDal
+    public interface ICategoryDal:IRepository<Category>
     {
+
+
+
+
+
+
+
+
+
+
 
         //CRUD
         //Type Name(); Metotlar böyle tanımlanır
@@ -19,7 +29,7 @@ namespace DataAccessLayer.Abstract
         void Update(Category p);
 
         void Delete(Category p);
-        
+
 
         //CRUD operasyonlarının gerçekleşeceği metotları tanımladık
     }
