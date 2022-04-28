@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concreate@*View sayfası içerisine Concreate dizinin dahil ettik*@
+@Model List<Category>@*Model verileri listelemek için kullanacağımız bileşen*@
+    @*Liste olarak Categorynin bilgilerini tutacak*@
+
+    @*Html sayfasında C# kodlarını kullanabilmek için ilgili komutun başına @ yazmamız gerekiyor Buna da 
+    ""Razor Syntax"" deniyor*@
+
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<br/>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Durum</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.CategoryStatus</td>
+        </tr>
+    }
+
+</table>
